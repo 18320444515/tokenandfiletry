@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!-- 居然无效<script type="text/javascript" src="common/head.js"></script>-->
+    <style type="text/css">
+        body{
+            background-image: url('http://p3ozmwny3.bkt.clouddn.com/FIR/resource/pictures/bak.jpg');
+        }
+        #ul{
+            background-color:rgba(1,1,225,0.2); /* IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂，但解析为透明 */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">技能运用小网站</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">登录与注册</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        参与人员
+                        <b class="caret"></b>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">ZTY</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        技术
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Bootstrap</a></li>
+                        <li><a href="#">jquery</a></li>
+                        <li><a href="#">springboot</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">redis-token</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">qiniu-uploading</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Ajax</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div id="ul">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a data-toggle="modal" data-target="#register" href=""><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+            <li><a data-toggle="modal" data-target="#login" href=""><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+        </ul>
+    </div>
+
+    <!-- 注册窗口 -->
+    <div id="register" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-title">
+                    <h1 class="text-center">注册</h1>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group" action="centre" method="post">
+                        <div class="form-group">
+                            <label >用户名</label>
+                            <input class="form-control" type="text" placeholder="6-15位字母或数字">
+                        </div>
+                        <div class="form-group">
+                            <label >密码</label>
+                            <input class="form-control" type="password" placeholder="至少6位字母或数字">
+                        </div>
+                        <div class="form-group">
+                            <label >再次输入密码</label>
+                            <input class="form-control" type="password" placeholder="至少6位字母或数字">
+                        </div>
+                        <div class="form-group">
+                            <label >邮箱</label>
+                            <input class="form-control" type="email" placeholder="例如:123@123.com">
+                        </div>
+                        <div class="text-right">
+                            <button class="btn btn-primary" type="submit">提交</button>
+                            <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                        </div>
+                        <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录窗口 -->
+    <div id="login" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-title">
+                    <h1 class="text-center">登录</h1>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group" action="centre" method="get">
+                        <div class="form-group">
+                            <label >用户名</label>
+                            <input class="form-control" type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label >密码</label>
+                            <input class="form-control" type="password" placeholder="">
+                        </div>
+                        <div class="text-right">
+                            <button class="btn btn-primary" type="submit">登录</button>
+                            <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                        </div>
+                        <a href="" data-toggle="modal" data-dismiss="modal" data-target="#register">还没有账号？点我注册</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
